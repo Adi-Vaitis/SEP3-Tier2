@@ -17,4 +17,29 @@ public class ClientService implements IClientService
   {
     return clientAccount.validateClient(Username, Password);
   }
+
+  @Override public String createClientAccount(Client client)
+  {
+    return clientAccount.createClientAccount(client);
+  }
+
+  @Override public String editAccount(Client client)
+  {
+    return clientAccount.editAccount(client);
+  }
+
+  @Override public void deleteClient(int clientId)
+  {
+    clientAccount.deleteClient(clientId);
+  }
+
+  @Override public Client getClientByUsername(String username)
+  {
+    return clientAccount.getClientByUsername(username);
+  }
+
+  @Override public Client getClientById(int clientId)
+  {
+    return clientAccount.getClientById(clientId);
+  }
 }
