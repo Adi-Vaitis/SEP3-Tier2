@@ -8,8 +8,6 @@ public interface IClientService
 
   String createClientAccount(Client client);
 
-  String editAccount(Client client);
-
   void deleteClient(int clientId);
 
   Client getClientByUsername(String username);

@@ -23,11 +23,6 @@ public class ClientService implements IClientService
     return clientAccount.createClientAccount(client);
   }
 
-  @Override public String editAccount(Client client)
-  {
-    return clientAccount.editAccount(client);
-  }
-
   @Override public void deleteClient(int clientId)
   {
     clientAccount.deleteClient(clientId);
