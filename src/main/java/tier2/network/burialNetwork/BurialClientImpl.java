@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.info.ProjectInfoProperties;
+import org.springframework.stereotype.Component;
 import tier2.models.Burial;
 import tier2.models.PreferenceForBurial;
 import tier2.services.communication.SocketClient;
@@ -12,6 +13,7 @@ import tier2.services.utility.NetworkType;
 
 import java.util.List;
 
+@Component
 public class BurialClientImpl implements BurialClient
 {
   @Autowired SocketClient socket;

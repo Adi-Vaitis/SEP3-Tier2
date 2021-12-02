@@ -11,11 +11,6 @@ public class BurialService implements IBurialService
 {
   private BurialClient burialClient;
 
-  public BurialService(BurialClient burialClient)
-  {
-    this.burialClient = burialClient;
-  }
-
   @Override public List<Burial> getBurials(int clientId)
   {
     return burialClient.getBurials(clientId);
