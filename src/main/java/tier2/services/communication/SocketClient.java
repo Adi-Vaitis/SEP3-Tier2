@@ -1,4 +1,4 @@
-package tier2.network.communication;
+package tier2.services.communication;
 
 import tier2.services.utility.NetworkPackage;
 

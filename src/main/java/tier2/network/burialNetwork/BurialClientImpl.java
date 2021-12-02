@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.info.ProjectInfoProperties;
 import tier2.models.Burial;
 import tier2.models.PreferenceForBurial;
-import tier2.network.communication.SocketClient;
+import tier2.services.communication.SocketClient;
 import tier2.services.utility.NetworkPackage;
 import tier2.services.utility.NetworkType;
 
