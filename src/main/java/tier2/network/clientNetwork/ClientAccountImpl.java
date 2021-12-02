@@ -24,4 +24,40 @@ public class ClientAccountImpl implements ClientAccount
     String input = socketClient.communicate(networkPackage);
     return gson.fromJson(input, Client.class);
   }
+
+  @Override public String createClientAccount(Client client)
+  {
+    Gson gson = new Gson();
+    String serializedClient = gson.toJson(client);
+    NetworkPackage networkPackage = new NetworkPackage(NetworkType.REGISTER, serializedClient);
+    return socketClient.communicate(networkPackage);
+  }
+
+  @Override public void deleteClient(int clientId)
+  {
+    Gson gson = new Gson();
+    NetworkPackage networkPackage = new NetworkPackage(NetworkType.DELETECLIENT, String.valueOf(clientId));
+    socketClient.communicate(networkPackage);
+  }
+
+  @Override public Client getClientByUsername(String username)
+  {
+    Gson gson = new Gson();
+    Client client = new Client();
+    client.setUsername(username);
+
+    String serializedClient = gson.toJson(client);
+    NetworkPackage networkPackage = new NetworkPackage(NetworkType.GETCLIENTBYUSERNAME, serializedClient);
+    String input = socketClient.communicate(networkPackage);
+
+    return gson.fromJson(input, Client.class);
+  }
+
+  @Override public Client getClientById(int clientId)
+  {
+    Gson gson = new Gson();
+    NetworkPackage networkPackage = new NetworkPackage(NetworkType.GETCLIENTBYID, String.valueOf(clientId));
+    String input = socketClient.communicate(networkPackage);
+    return gson.fromJson(input, Client.class);
+  }
 }
