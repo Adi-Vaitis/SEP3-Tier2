@@ -44,11 +44,12 @@ public class BurialClientImpl implements BurialClient
 
   @Override public void deleteBurial(int burialId)
   {
-
+    Gson gson = new Gson();
+    NetworkPackage networkPackage = new NetworkPackage(NetworkType.DELETEBURIAL, String.valueOf(burialId));
+    socket.communicate(networkPackage);
   }
 
-  @Override public void addPreferenceToBurial(
-      PreferenceForBurial preferenceForBurial)
+  @Override public void addPreferenceToBurial(PreferenceForBurial preferenceForBurial)
   {
 
   }
