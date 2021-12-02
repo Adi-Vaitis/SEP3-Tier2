@@ -28,7 +28,10 @@ public class BurialClientImpl implements BurialClient
 
   @Override public void addBurial(Burial burial)
   {
-
+    Gson gson = new Gson();
+    String serializedBurial = gson.toJson(burial);
+    NetworkPackage networkPackage = new NetworkPackage(NetworkType.ADDBURIAL, serializedBurial);
+    socket.communicate(networkPackage);
   }
 
   @Override public void editBurial(Burial burial)
