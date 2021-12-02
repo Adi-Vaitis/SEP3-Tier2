@@ -33,14 +33,6 @@ public class ClientAccountImpl implements ClientAccount
     return socketClient.communicate(networkPackage);
   }
 
-  @Override public String editAccount(Client client)
-  {
-    Gson gson = new Gson();
-    String serializedClient = gson.toJson(client);
-    NetworkPackage networkPackage = new NetworkPackage(NetworkType.EDITACCOUNT, serializedClient);
-    return socketClient.communicate(networkPackage);
-  }
-
   @Override public void deleteClient(int clientId)
   {
     Gson gson = new Gson();
