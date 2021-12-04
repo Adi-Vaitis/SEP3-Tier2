@@ -31,7 +31,7 @@ public class ClientController
     return service.getClientByUsername(username);
   }
 
-  @GetMapping("/accounts/{userId")
+  @GetMapping("/accounts/{clientId}")
   public Client getClientById(@PathVariable int clientId){
     return service.getClientById(clientId);
   }

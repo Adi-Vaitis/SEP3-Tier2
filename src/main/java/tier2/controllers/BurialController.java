@@ -27,7 +27,7 @@ public class BurialController
     burialService.editBurial(burial);
   }
 
-  @DeleteMapping("/burials/{burialId")
+  @DeleteMapping("/burials/{burialId}")
   public void deleteBurial(@PathVariable int burialId){
     burialService.deleteBurial(burialId);
   }
