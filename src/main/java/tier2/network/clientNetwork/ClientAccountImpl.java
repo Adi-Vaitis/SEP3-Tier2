@@ -30,6 +30,7 @@ public class ClientAccountImpl implements ClientAccount
     Gson gson = new Gson();
     String serializedClient = gson.toJson(client);
     NetworkPackage networkPackage = new NetworkPackage(NetworkType.REGISTER, serializedClient);
+    System.out.println("REGISTER!!!!!!!!!!!!!!!!!!");
     return socketClient.communicate(networkPackage);
   }
 

@@ -20,6 +20,7 @@ public class ClientService implements IClientService
 
   @Override public String createClientAccount(Client client)
   {
+    System.out.println("REGISTER!!!!!!!!!!!!!!!!!!");
     return clientAccount.createClientAccount(client);
   }
 
