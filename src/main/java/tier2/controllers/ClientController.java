@@ -5,6 +5,8 @@ import tier2.models.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import tier2.services.client.IClientService;
 
+import java.sql.SQLOutput;
+
 @RestController
 public class ClientController
 {
@@ -18,6 +20,7 @@ public class ClientController
   @GetMapping("/register")
   public String register(@RequestBody Client client){
     System.out.println(client);
+    System.out.println("REGISTER!!!!!!!!!!!!!!!!!!");
     return service.createClientAccount(client);
   }
 
