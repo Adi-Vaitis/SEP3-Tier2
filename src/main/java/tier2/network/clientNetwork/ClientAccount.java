@@ -4,13 +4,13 @@ import tier2.models.Client;
 
 public interface ClientAccount
 {
-  Client validateClient(String username, String password);
+  Client GetClient(String username, String password);
 
-  String createClientAccount(Client client);
+  String CreateClientAccount(Client client);
 
-  void deleteClient(int clientId);
+  void DeleteClient(int clientId);
 
-  Client getClientByUsername(String username);
+  Client GetClientByUsername(String username);
 
-  Client getClientById(int clientId);
+  Client GetClientById(int clientId);
 }

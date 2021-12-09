@@ -5,25 +5,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NetworkPackage
 {
   @JsonProperty
-  private NetworkType type;
+  private NetworkType Type;
   @JsonProperty
-  private String content;
+  private String Content;
 
   public NetworkPackage(NetworkType type, String content) {
-    this.type = type;
-    this.content = content;
+    this.Type = type;
+    this.Content = content;
   }
 
   public NetworkType getType() {
-    return type;
+    return Type;
   }
 
   public String getContent() {
-    return content;
+    return Content;
   }
 
   @Override
   public String toString() {
-    return "NetworkPackage{" + "type=" + type + ", content=" + content + '}';
+    return "NetworkPackage{" + "type=" + Type + ", content=" + Content + '}';
   }
 }

@@ -5,35 +5,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClientsPreferences
 {
   @JsonProperty
-  private int clientId;
+  private int ClientId;
   @JsonProperty
-  private int preferenceId;
+  private int PreferenceId;
 
   public ClientsPreferences(){}
 
-  public void setClientId(int clientId)
+  public void setClientId(int ClientId)
   {
-    this.clientId = clientId;
+    this.ClientId = ClientId;
   }
 
-  public void setPreferenceId(int preferenceId)
+  public void setPreferenceId(int PreferenceId)
   {
-    this.preferenceId = preferenceId;
+    this.PreferenceId = PreferenceId;
   }
 
   public int getClientId()
   {
-    return clientId;
+    return ClientId;
   }
 
   public int getPreferenceId()
   {
-    return preferenceId;
+    return PreferenceId;
   }
 
   @Override public String toString()
   {
-    return "ClientsPreferences{" + "clientId=" + clientId + ", preferenceId="
-        + preferenceId + '}';
+    return "ClientsPreferences{" + "clientId=" + ClientId + ", preferenceId="
+        + PreferenceId + '}';
   }
 }

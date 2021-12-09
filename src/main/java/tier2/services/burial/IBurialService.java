@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface IBurialService
 {
-  List<Burial> getBurials(int clientId);
+  List<Burial> GetBurialsForClient(int clientId);
 
-  void addBurial(Burial burial);
+  void CreateBurial(Burial burial);
 
-  void editBurial(Burial burial);
+  void DeleteBurial(Burial burial);
 
   void deleteBurial(int burialId);
 

@@ -5,35 +5,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BurialForClient
 {
   @JsonProperty
-  private int burialId;
+  private int BurialId;
   @JsonProperty
-  private int clientId;
+  private int ClientId;
 
   public BurialForClient(){}
 
   public void setBurialId(int burialId)
   {
-    this.burialId = burialId;
+    this.BurialId = burialId;
   }
 
   public void setClientId(int clientId)
   {
-    this.clientId = clientId;
+    this.ClientId = clientId;
   }
 
   public int getBurialId()
   {
-    return burialId;
+    return BurialId;
   }
 
   public int getClientId()
   {
-    return clientId;
+    return ClientId;
   }
 
   @Override public String toString()
   {
-    return "BurialForClient{" + "burialId=" + burialId + ", clientId="
-        + clientId + '}';
+    return "BurialForClient{" + "burialId=" + BurialId + ", clientId="
+        + ClientId + '}';
   }
 }

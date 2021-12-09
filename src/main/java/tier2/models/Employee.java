@@ -2,22 +2,14 @@ package tier2.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Client
+public class Employee
 {
-  @JsonProperty
-  private int Id;
   @JsonProperty
   private String Username;
   @JsonProperty
   private String Password;
-  @JsonProperty
-  private String Email;
-  @JsonProperty
-  private String Name;
 
-  public Client()
-  {
-  }
+  public Employee(){}
 
   public String getUsername()
   {
@@ -39,8 +31,9 @@ public class Client
     this.Password = Password;
   }
 
-  @Override public String toString() {
-    return "id=" + Id + ", name='" + Name + '\'' + ", username='" + Username + '\'' + ", password='" + Password
-        + '\'';
+  @Override public String toString()
+  {
+    return "Employee{" + "username='" + Username + '\'' + ", password='"
+        + Password + '\'' + '}';
   }
 }

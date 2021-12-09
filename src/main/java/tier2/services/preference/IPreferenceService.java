@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IPreferenceService
 {
-  List<Preference> getPreferences();
+  List<Preference> GetPreference();
 
-  void addPreference(Preference preference);
+  void AddPreference(Preference preference);
 }
