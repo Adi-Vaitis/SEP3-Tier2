@@ -4,11 +4,11 @@ import tier2.models.Employee;
 
 public interface IEmployeeService
 {
-  Employee validateEmployee(String Username, String password);
+  Employee GetEmployee(String username, String password);
 
-  void deleteEmployee(int employeeId);
+  void DeleteEmployee(int employeeId);
 
-  Employee getEmployeeByUsername(String Username);
+  Employee GetEmployeeByUsername(String username);
 
-  Employee getEmployeeById(int id);
+  Employee GetEmployeeById(int employeeId);
 }

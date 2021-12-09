@@ -13,23 +13,23 @@ public class EmployeeService implements IEmployeeService
     this.employeeAccount = employeeAccount;
   }
 
-  @Override public Employee validateEmployee(String Username, String password)
+  @Override public Employee GetEmployee(String username, String password)
   {
-    return employeeAccount.validateEmployee(Username, password);
+    return employeeAccount.GetEmployee(username, password);
   }
 
-  @Override public void deleteEmployee(int employeeId)
+  @Override public void DeleteEmployee(int employeeId)
   {
-    employeeAccount.deleteEmployee(employeeId);
+    employeeAccount.DeleteEmployee(employeeId);
   }
 
-  @Override public Employee getEmployeeByUsername(String Username)
+  @Override public Employee GetEmployeeByUsername(String username)
   {
-    return employeeAccount.getEmployeeByUsername(Username);
+    return employeeAccount.GetEmployeeByUsername(username);
   }
 
-  @Override public Employee getEmployeeById(int id)
+  @Override public Employee GetEmployeeById(int employeeId)
   {
-    return employeeAccount.getEmployeeById(id);
+    return employeeAccount.GetEmployeeById(employeeId);
   }
 }

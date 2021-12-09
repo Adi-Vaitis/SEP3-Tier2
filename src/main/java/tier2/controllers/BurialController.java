@@ -14,17 +14,17 @@ public class BurialController
 
   @GetMapping("/burials")
   public List<Burial> getBurials(@RequestParam("ClientId") int clientId){
-    return burialService.getBurials(clientId);
+    return burialService.GetBurialsForClient(clientId);
   }
 
   @PostMapping("/burials")
   public void AddBurial(@RequestBody Burial burial){
-    burialService.addBurial(burial);
+    burialService.CreateBurial(burial);
   }
 
   @PatchMapping("/burials")
   public void editBurial(@RequestBody Burial burial){
-    burialService.editBurial(burial);
+    burialService.DeleteBurial(burial);
   }
 
   @DeleteMapping("/burials/{burialId}")

@@ -11,23 +11,23 @@ public class BurialService implements IBurialService
 {
   private BurialClient burialClient;
 
-  @Override public List<Burial> getBurials(int clientId)
+  @Override public List<Burial> GetBurialsForClient(int clientId)
   {
-    return burialClient.getBurials(clientId);
+    return burialClient.GetBurialsForClient(clientId);
   }
 
-  @Override public void addBurial(Burial burial)
+  @Override public void CreateBurial(Burial burial)
   {
-    burialClient.addBurial(burial);
+    burialClient.CreateBurial(burial);
   }
 
-  @Override public void editBurial(Burial burial)
+  @Override public void DeleteBurial(Burial burial)
   {
-    burialClient.editBurial(burial);
+    burialClient.EditBurial(burial);
   }
 
   @Override public void deleteBurial(int burialId)
   {
-    burialClient.deleteBurial(burialId);
+    burialClient.DeleteBurial(burialId);
   }
 }

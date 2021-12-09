@@ -17,11 +17,11 @@ public class PreferenceController
 
   @GetMapping("/preferences")
   public List<Preference> getPreferences(){
-    return preferenceService.getPreferences();
+    return preferenceService.GetPreference();
   }
 
   @PostMapping("/preferences")
   public void addPreference(@RequestBody Preference preference){
-    preferenceService.addPreference(preference);
+    preferenceService.AddPreference(preference);
   }
 }

@@ -13,7 +13,7 @@ public class ClientAccountImpl implements ClientAccount
 {
   @Autowired SocketClient socketClient;
 
-  @Override public Client validateClient(String Username, String Password)
+  @Override public Client GetClient(String Username, String Password)
   {
     Gson gson = new Gson();
     Client client = new Client();
@@ -25,7 +25,7 @@ public class ClientAccountImpl implements ClientAccount
     return gson.fromJson(input, Client.class);
   }
 
-  @Override public String createClientAccount(Client client)
+  @Override public String CreateClientAccount(Client client)
   {
     Gson gson = new Gson();
     String serializedClient = gson.toJson(client);
@@ -34,14 +34,14 @@ public class ClientAccountImpl implements ClientAccount
     return socketClient.communicate(networkPackage);
   }
 
-  @Override public void deleteClient(int clientId)
+  @Override public void DeleteClient(int clientId)
   {
     Gson gson = new Gson();
     NetworkPackage networkPackage = new NetworkPackage(NetworkType.DELETECLIENT, String.valueOf(clientId));
     socketClient.communicate(networkPackage);
   }
 
-  @Override public Client getClientByUsername(String username)
+  @Override public Client GetClientByUsername(String username)
   {
     Gson gson = new Gson();
     Client client = new Client();
@@ -54,7 +54,7 @@ public class ClientAccountImpl implements ClientAccount
     return gson.fromJson(input, Client.class);
   }
 
-  @Override public Client getClientById(int clientId)
+  @Override public Client GetClientById(int clientId)
   {
     Gson gson = new Gson();
     NetworkPackage networkPackage = new NetworkPackage(NetworkType.GETCLIENTBYID, String.valueOf(clientId));

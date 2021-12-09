@@ -13,7 +13,7 @@ public class EmployeeAccountImpl implements EmployeeAccount
 {
   @Autowired SocketClient socket;
 
-  @Override public Employee validateEmployee(String username, String password)
+  @Override public Employee GetEmployee(String username, String password)
   {
     Gson gson = new Gson();
     Employee employee = new Employee();
@@ -25,14 +25,14 @@ public class EmployeeAccountImpl implements EmployeeAccount
     return gson.fromJson(input, Employee.class);
   }
 
-  @Override public void deleteEmployee(int employeeId)
+  @Override public void DeleteEmployee(int employeeId)
   {
     Gson gson = new Gson();
     NetworkPackage networkPackage = new NetworkPackage(NetworkType.DELETEEMPLOYEE, String.valueOf(employeeId));
     socket.communicate(networkPackage);
   }
 
-  @Override public Employee getEmployeeByUsername(String username)
+  @Override public Employee GetEmployeeByUsername(String username)
   {
     Gson gson = new Gson();
     Employee employee = new Employee();
@@ -45,10 +45,11 @@ public class EmployeeAccountImpl implements EmployeeAccount
     return gson.fromJson(input, Employee.class);
   }
 
-  @Override public Employee getEmployeeById(int id)
+  @Override public Employee GetEmployeeById(int employeeId)
   {
     Gson gson = new Gson();
-    NetworkPackage networkPackage = new NetworkPackage(NetworkType.GETEMPLOYEEBYID, String.valueOf(id));
+    NetworkPackage networkPackage = new NetworkPackage(NetworkType.GETEMPLOYEEBYID, String.valueOf(
+        employeeId));
     String input = socket.communicate(networkPackage);
     return gson.fromJson(input, Employee.class);
   }

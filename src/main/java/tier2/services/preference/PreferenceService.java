@@ -16,12 +16,12 @@ public class PreferenceService implements IPreferenceService
     this.prefBurial = prefBurial;
   }
 
-  @Override public List<Preference> getPreferences()
+  @Override public List<Preference> GetPreference()
   {
     return prefBurial.getPreferences();
   }
 
-  @Override public void addPreference(Preference preference)
+  @Override public void AddPreference(Preference preference)
   {
     prefBurial.addPreference(preference);
   }

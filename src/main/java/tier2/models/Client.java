@@ -5,19 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Client
 {
   @JsonProperty
-  private int id;
+  private int Id;
   @JsonProperty
-  private String username;
+  private String Username;
   @JsonProperty
-  private String password;
+  private String Password;
   @JsonProperty
-  private String email;
+  private String Email;
   @JsonProperty
-  private String name;
-  @JsonProperty
-  private String phoneNumber;
-  @JsonProperty
-  private String country;
+  private String Name;
 
   public Client()
   {
@@ -25,25 +21,26 @@ public class Client
 
   public String getUsername()
   {
-    return username;
+    return Username;
   }
 
   public String getPassword()
   {
-    return password;
+    return Password;
   }
 
-  public void setUsername(String username)
+  public void setUsername(String Username)
   {
-    this.username = username;
+    this.Username = Username;
   }
 
-  public void setPassword(String password)
+  public void setPassword(String Password)
   {
-    this.password = password;
+    this.Password = Password;
   }
 
   @Override public String toString() {
-    return "id=" + id + ", name='" + name + '\'' + ", username='" + username + '\'' + ", password='" + password + '\'';
+    return "id=" + Id + ", name='" + Name + '\'' + ", username='" + Username + '\'' + ", password='" + Password
+        + '\'';
   }
 }

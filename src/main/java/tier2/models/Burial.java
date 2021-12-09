@@ -8,31 +8,32 @@ import java.util.List;
 public class Burial
 {
   @JsonProperty
-  private int id;
+  private int Id;
   @JsonProperty
-  private List<Preference> preferences;
+  private List<Preference> PreferenceForBurial;
   @JsonProperty
-  private String name;
+  private String FullNameOfDeadMan;
   @JsonProperty
-  private Date date;
+  private Date Date;
   @JsonProperty
-  private String location;
+  private String Location;
   @JsonProperty
-  private int numberOfParticipants;
+  private int NumberOfParticipants;
   @JsonProperty
-  private Client client;
+  private Client Client;
   @JsonProperty
-  private int clientId;
+  private int ClientId;
   @JsonProperty
-  private String comments;
+  private String Comments;
 
   public Burial(){}
 
   @Override public String toString()
   {
-    return "Burial{" + "id=" + id + ", preferences=" + preferences + ", name='"
-        + name + '\'' + ", date=" + date + ", location='" + location + '\''
-        + ", numberOfParticipants=" + numberOfParticipants + ", clientId="
-        + clientId + ", comments='" + comments + '\'' + '}';
+    return "Burial{" + "id=" + Id + ", preferences=" + PreferenceForBurial + ", name='"
+        + FullNameOfDeadMan + '\'' + ", date=" + Date + ", location='" + Location
+        + '\''
+        + ", numberOfParticipants=" + NumberOfParticipants + ", clientId="
+        + ClientId + ", comments='" + Comments + '\'' + '}';
   }
 }

@@ -13,29 +13,29 @@ public class ClientService implements IClientService
     this.clientAccount = clientAccount;
   }
 
-  @Override public Client validateClient(String Username, String Password)
+  @Override public Client GetClient(String username, String password)
   {
-    return clientAccount.validateClient(Username, Password);
+    return clientAccount.GetClient(username, password);
   }
 
-  @Override public String createClientAccount(Client client)
+  @Override public String CreateClientAccount(Client client)
   {
     System.out.println("REGISTER!!!!!!!!!!!!!!!!!!");
-    return clientAccount.createClientAccount(client);
+    return clientAccount.CreateClientAccount(client);
   }
 
-  @Override public void deleteClient(int clientId)
+  @Override public void DeleteClient(int clientId)
   {
-    clientAccount.deleteClient(clientId);
+    clientAccount.DeleteClient(clientId);
   }
 
-  @Override public Client getClientByUsername(String username)
+  @Override public Client GetClientByUsername(String username)
   {
-    return clientAccount.getClientByUsername(username);
+    return clientAccount.GetClientByUsername(username);
   }
 
-  @Override public Client getClientById(int clientId)
+  @Override public Client GetClientById(int clientId)
   {
-    return clientAccount.getClientById(clientId);
+    return clientAccount.GetClientById(clientId);
   }
 }

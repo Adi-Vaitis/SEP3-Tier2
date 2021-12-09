@@ -5,35 +5,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PreferenceForBurial
 {
   @JsonProperty
-  private int preferenceId;
+  private int PreferenceId;
   @JsonProperty
-  private int burialId;
+  private int BurialId;
 
   public PreferenceForBurial(){}
 
-  public void setPreferenceId(int preferenceId)
+  public void setPreferenceId(int PreferenceId)
   {
-    this.preferenceId = preferenceId;
+    this.PreferenceId = PreferenceId;
   }
 
-  public void setBurialId(int burialId)
+  public void setBurialId(int BurialId)
   {
-    this.burialId = burialId;
+    this.BurialId = BurialId;
   }
 
   public int getPreferenceId()
   {
-    return preferenceId;
+    return PreferenceId;
   }
 
   public int getBurialId()
   {
-    return burialId;
+    return BurialId;
   }
 
   @Override public String toString()
   {
-    return "PreferenceForBurial{" + "preferenceId=" + preferenceId
-        + ", burialId=" + burialId + '}';
+    return "PreferenceForBurial{" + "preferenceId=" + PreferenceId
+        + ", burialId=" + BurialId + '}';
   }
 }

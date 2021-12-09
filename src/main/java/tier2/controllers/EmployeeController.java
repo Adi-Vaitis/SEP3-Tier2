@@ -12,21 +12,21 @@ public class EmployeeController
 
   @GetMapping("/login")
   public Employee getEmployee(@RequestBody Employee employee){
-    return service.validateEmployee(employee.getUsername(), employee.getPassword());
+    return service.GetEmployee(employee.getUsername(), employee.getPassword());
   }
 
   @DeleteMapping("/delete/{employeeId}")
   public void deleteEmployee(@PathVariable int employeeId){
-    service.deleteEmployee(employeeId);
+    service.DeleteEmployee(employeeId);
   }
 
   @GetMapping("/accounts")
   public Employee getEmployeeByUsername(@RequestParam("Username") String username){
-    return service.getEmployeeByUsername(username);
+    return service.GetEmployeeByUsername(username);
   }
 
   @GetMapping("/accounts/{employeeId}")
   public Employee getEmployeeById(@PathVariable int employeeId){
-    return service.getEmployeeById(employeeId);
+    return service.GetEmployeeById(employeeId);
   }
 }

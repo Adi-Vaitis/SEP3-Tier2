@@ -18,7 +18,7 @@ public class BurialClientImpl implements BurialClient
 {
   @Autowired SocketClient socket;
 
-  @Override public List<Burial> getBurials(int clientId)
+  @Override public List<Burial> GetBurialsForClient(int clientId)
   {
     Gson gson = new Gson();
     NetworkPackage networkPackage = new NetworkPackage(NetworkType.BURIALS, String.valueOf(clientId));
@@ -28,7 +28,7 @@ public class BurialClientImpl implements BurialClient
     }.getType());
   }
 
-  @Override public void addBurial(Burial burial)
+  @Override public void CreateBurial(Burial burial)
   {
     Gson gson = new Gson();
     String serializedBurial = gson.toJson(burial);
@@ -36,7 +36,7 @@ public class BurialClientImpl implements BurialClient
     socket.communicate(networkPackage);
   }
 
-  @Override public void editBurial(Burial burial)
+  @Override public void EditBurial(Burial burial)
   {
     Gson gson = new Gson();
     String serializedBurial = gson.toJson(burial);
@@ -44,7 +44,7 @@ public class BurialClientImpl implements BurialClient
     socket.communicate(networkPackage);
   }
 
-  @Override public void deleteBurial(int burialId)
+  @Override public void DeleteBurial(int burialId)
   {
     Gson gson = new Gson();
     NetworkPackage networkPackage = new NetworkPackage(NetworkType.DELETEBURIAL, String.valueOf(burialId));

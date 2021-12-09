@@ -7,37 +7,37 @@ import java.util.List;
 public class Preference
 {
   @JsonProperty
-  private int id;
+  private int Id;
   @JsonProperty
-  private String description;
+  private String Description;
   @JsonProperty
-  private List<Burial> burials;
+  private List<Burial> Burials;
 
   public Preference(){}
 
   public void setId(int id)
   {
-    this.id = id;
+    this.Id = id;
   }
 
-  public void setDescription(String description)
+  public void setDescription(String Description)
   {
-    this.description = description;
+    this.Description = Description;
   }
 
   public int getId()
   {
-    return id;
+    return Id;
   }
 
   public String getDescription()
   {
-    return description;
+    return Description;
   }
 
   @Override public String toString()
   {
-    return "Preference{" + "id=" + id + ", description='" + description + '\''
+    return "Preference{" + "id=" + Id + ", description='" + Description + '\''
         + '}';
   }
 }

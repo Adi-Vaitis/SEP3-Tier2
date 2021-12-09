@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface BurialClient
 {
-  List<Burial> getBurials(int clientId);
-  void addBurial(Burial burial);
-  void editBurial(Burial burial);
-  void deleteBurial(int burialId);
+  List<Burial> GetBurialsForClient(int clientId);
+  void CreateBurial(Burial burial);
+  void EditBurial(Burial burial);
+  void DeleteBurial(int burialId);
   void addPreferenceToBurial(PreferenceForBurial preferenceForBurial);
 }
