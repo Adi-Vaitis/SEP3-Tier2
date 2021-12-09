@@ -8,7 +8,7 @@ public interface EmployeeAccount
 
   void deleteEmployee(int employeeId);
 
-  Employee getEmployeeByUsername(String usernmae);
+  Employee getEmployeeByUsername(String username);
 
   Employee getEmployeeById(int id);
 }
