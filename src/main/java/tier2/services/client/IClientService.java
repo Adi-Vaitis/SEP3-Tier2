@@ -4,9 +4,11 @@ import tier2.models.Client;
 
 public interface IClientService
 {
-  Client GetClient(String username, String password);
+  Client GetClient(String username, String password)
+      throws IllegalAccessException;
 
-  String CreateClientAccount(Client client);
+
+  String CreateClientAccount(Client client) throws IllegalArgumentException;
 
   void DeleteClient(int clientId);
 

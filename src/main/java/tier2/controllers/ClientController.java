@@ -1,25 +1,41 @@
 package tier2.controllers;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tier2.models.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import tier2.services.client.IClientService;
 
 @RestController
+// @RequestMapping(value = "/client")
 public class ClientController
 {
   @Autowired IClientService service;
 
   @GetMapping("/login")
-  public Client getClient(@RequestBody Client client){
-    return service.GetClient(client.getUsername(), client.getPassword());
+  public ResponseEntity getClient(@RequestBody Client client){
+
+    try{
+      Client client1 = service.GetClient(client.getUsername(), client.getPassword());
+      return new ResponseEntity(client1, HttpStatus.OK);
+    } catch (Exception e){
+      return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+    }
+
+   // return service.GetClient(client.getUsername(), client.getPassword());
+
   }
 
   @GetMapping("/register")
-  public String register(@RequestBody Client client){
-    System.out.println(client);
-    System.out.println("REGISTER!!!!!!!!!!!!!!!!!!");
-    return service.CreateClientAccount(client);
+  public ResponseEntity register(@RequestBody Client client){
+    try{
+      String client1 = service.CreateClientAccount(client);
+      return new ResponseEntity(client1, HttpStatus.OK);
+    }
+    catch(Exception e){
+      return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+    }
   }
 
   @DeleteMapping("/delete/{clientId}")
