@@ -1,6 +1,7 @@
 package tier2.network.clientNetwork;
 
 import com.google.gson.Gson;
+import org.springframework.stereotype.Repository;
 import tier2.models.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -30,7 +31,6 @@ public class ClientAccountImpl implements ClientAccount
     Gson gson = new Gson();
     String serializedClient = gson.toJson(client);
     NetworkPackage networkPackage = new NetworkPackage(NetworkType.REGISTER, serializedClient);
-    System.out.println("REGISTER!!!!!!!!!!!!!!!!!!");
     return socketClient.communicate(networkPackage);
   }
 

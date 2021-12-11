@@ -1,4 +1,4 @@
-package tier2.network.burialNetwork;
+/* package tier2.network.burialNetwork;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -55,4 +55,7 @@ public class BurialClientImpl implements BurialClient
   {
     //TODO
   }
+
 }
+
+ */

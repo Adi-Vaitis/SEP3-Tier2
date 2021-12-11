@@ -19,6 +19,11 @@ public class Client
   {
   }
 
+  public Client(String username, String password){
+    this.Username = username;
+    this.Password = password;
+  }
+
   public String getUsername()
   {
     return Username;
