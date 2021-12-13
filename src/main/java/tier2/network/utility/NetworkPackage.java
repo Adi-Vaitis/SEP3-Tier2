@@ -1,4 +1,4 @@
-package tier2.services.utility;
+package tier2.network.utility;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

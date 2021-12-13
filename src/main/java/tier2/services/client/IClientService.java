@@ -8,7 +8,7 @@ public interface IClientService
       throws IllegalAccessException;
 
 
-  String CreateClientAccount(Client client) throws IllegalArgumentException;
+  String CreateClientAccount(Client client);
 
   void DeleteClient(int clientId);
 

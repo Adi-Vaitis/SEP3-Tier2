@@ -2,8 +2,8 @@ package tier2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import tier2.services.communication.ClientConnection;
-import tier2.services.communication.SocketClient;
+import tier2.network.communication.ClientConnection;
+import tier2.network.communication.SocketClient;
 
 @SpringBootApplication
 public class Tier2Application
