@@ -1,13 +1,12 @@
 package tier2.network.clientNetwork;
 
 import com.google.gson.Gson;
-import org.springframework.stereotype.Repository;
 import tier2.models.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import tier2.services.communication.SocketClient;
-import tier2.services.utility.NetworkPackage;
-import tier2.services.utility.NetworkType;
+import tier2.network.communication.SocketClient;
+import tier2.network.utility.NetworkPackage;
+import tier2.network.utility.NetworkType;
 
 @Component
 public class ClientAccountImpl implements ClientAccount

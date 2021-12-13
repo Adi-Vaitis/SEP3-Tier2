@@ -1,18 +1,15 @@
-package tier2.services.communication;
+package tier2.network.communication;
 
 import com.google.gson.Gson;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Service;
-import tier2.services.utility.NetworkPackage;
-import tier2.services.utility.NetworkType;
+import org.springframework.stereotype.Component;
+import tier2.network.utility.NetworkPackage;
+import tier2.network.utility.NetworkType;
 
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
-//@Service @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-@org.springframework.stereotype.Component
+@Component
 public class ClientConnection implements SocketClient
 {
 
@@ -50,7 +47,7 @@ public class ClientConnection implements SocketClient
         updatedString += string.charAt(i);
       }
 
-      if(!updatedString.equals("conFromTier3")) {
+      if(!updatedString.equals("Tier3")) {
         return updatedString;
       }
       else System.out.println("Client connection problem");

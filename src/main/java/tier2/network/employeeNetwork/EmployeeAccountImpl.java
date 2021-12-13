@@ -4,9 +4,9 @@ import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import tier2.models.Employee;
-import tier2.services.communication.SocketClient;
-import tier2.services.utility.NetworkPackage;
-import tier2.services.utility.NetworkType;
+import tier2.network.communication.SocketClient;
+import tier2.network.utility.NetworkPackage;
+import tier2.network.utility.NetworkType;
 
 @Component
 public class EmployeeAccountImpl implements EmployeeAccount

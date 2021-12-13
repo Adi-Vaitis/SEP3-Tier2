@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import tier2.services.client.IClientService;
 
 @RestController
-// @RequestMapping(value = "/client")
 public class ClientController
 {
   @Autowired IClientService service;
@@ -22,9 +21,6 @@ public class ClientController
     } catch (Exception e){
       return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
     }
-
-   // return service.GetClient(client.getUsername(), client.getPassword());
-
   }
 
   @GetMapping("/register")
@@ -44,13 +40,23 @@ public class ClientController
   }
 
   @GetMapping("/accounts")
-  public Client getClientByUsername(@RequestParam("Username") String username){
-    return service.GetClientByUsername(username);
+  public ResponseEntity getClientByUsername(@RequestParam("Username") String username){
+    try{
+      Client client = service.GetClientByUsername(username);
+      return new ResponseEntity(client, HttpStatus.OK);
+    }catch (Exception e){
+      return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+    }
   }
 
   @GetMapping("/accounts/{clientId}")
-  public Client getClientById(@PathVariable int clientId){
-    return service.GetClientById(clientId);
+  public ResponseEntity getClientById(@PathVariable int clientId){
+    try{
+      Client client = service.GetClientById(clientId);
+      return new ResponseEntity(client, HttpStatus.OK);
+    }catch (Exception e){
+      return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+    }
   }
 
 }

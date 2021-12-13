@@ -24,7 +24,7 @@ public class ClientService implements IClientService
 
 
 
-  @Override public String CreateClientAccount(Client client) throws IllegalArgumentException
+  @Override public String CreateClientAccount(Client client)
   {
     return clientAccount.CreateClientAccount(client);
   }

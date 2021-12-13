@@ -5,9 +5,9 @@ import com.google.gson.reflect.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import tier2.models.Preference;
-import tier2.services.communication.SocketClient;
-import tier2.services.utility.NetworkPackage;
-import tier2.services.utility.NetworkType;
+import tier2.network.communication.SocketClient;
+import tier2.network.utility.NetworkPackage;
+import tier2.network.utility.NetworkType;
 
 import java.util.List;
 

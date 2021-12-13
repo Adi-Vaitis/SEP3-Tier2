@@ -1,6 +1,6 @@
-package tier2.services.communication;
+package tier2.network.communication;
 
-import tier2.services.utility.NetworkPackage;
+import tier2.network.utility.NetworkPackage;
 
 public interface SocketClient
 {
